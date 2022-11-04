@@ -90,9 +90,10 @@ a {
 }
 
 /* HEADER PROFILE */
-
-.header {
-  align-items: flex-end;
+.header .profile {
+  display: flex;
+  position: absolute;
+  right: 1.5%;
 }
 
 .header .profile .notification {
@@ -105,6 +106,82 @@ a {
   align-items: center;
 }
 
-.header .profile .notification i {
+.header .profile .notification .notification-icon {
   color: #8F34FE;
+}
+
+.header .profile .menu-profile .menu-item {
+  width: 42px;
+  height: 42px;
+  
+}
+
+.header .profile .user-pic {
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 30px;
+
+}
+
+.header .profile .submenu-wrap {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 280px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.header .profile .submenu-wrap.open-menu {
+  max-height: 400px;
+}
+
+.header .profile .submenu-wrap .submenu {
+  background: #fff;
+  padding: 22px;
+  border-radius: 30px;
+}
+
+.header .profile .submenu-wrap .submenu .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header .profile .submenu-wrap .submenu .user-info h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.header .profile .submenu-wrap .submenu .user-info img {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.header .profile .submenu-wrap .submenu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 10px 0 15px;
+}
+
+.header .profile .submenu-wrap .submenu .submenu-link {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.875rem;
+  margin: 12px 0;
+}
+
+.header .profile .submenu-wrap .submenu .submenu-link p {
+  width: 100%;
+}
+
+.header .profile .submenu-wrap .submenu .submenu-link .submenu-icon {
+  color: #7E7E7E;
+  font-size: 22px;
 }
