@@ -1,0 +1,110 @@
+/* 
+  #989898 - texto sidebar  
+  #9226C3 - texto evidencia
+  #F2F2F7 - background
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F2F7;
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+}
+
+.sidebar .logo {
+  margin-bottom: 2.25rem;
+  padding: 0 0.8rem;
+}
+
+.sidebar .logo img {
+  width: 100px;
+}
+
+.sidebar .sidebar-menu {
+  padding: 1.625rem 0.6rem;
+}
+
+.sidebar .sidebar-menu .menu li {
+  position: relative;
+  padding: 0.8rem 0.8rem;
+}
+
+.sidebar .sidebar-menu .menu li .submenu {
+  position: absolute;
+  display: none;
+}
+
+.sidebar .sidebar-menu .menu li a {
+  display: flex;
+  color: #989898;
+  font-weight: bold;
+}
+
+.sidebar .sidebar-menu .menu li a .icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 3;
+  margin-right: 0.5rem;
+}
+
+.sidebar .sidebar-menu .menu li:active,
+.sidebar .sidebar-menu .menu li:active a {
+  color: #9226C3;
+  background-color: #F2F2F7;
+  border-radius: 0.625rem;
+} 
+
+/* SUBMENU */
+
+.sidebar .sidebar-menu .menu .submenu .submenu-list {
+  display: none;
+}
+
+/* HEADER PROFILE */
+
+.header {
+  align-items: flex-end;
+}
+
+.header .profile .notification {
+  background: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .profile .notification i {
+  color: #8F34FE;
+}

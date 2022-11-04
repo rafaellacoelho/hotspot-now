@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Attendance Dashboard | By Code Info</title>
+  <link rel="stylesheet" href="src/css/style.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="sidebar-menu">
+        <div class="logo">
+          <img src="./src/img/logo.svg" alt="HOTSPOT NOW Logo">
+        </div>
+        <ul id="accordion-menu" class="menu menu-accordion">
+          <li>
+            <a href="#">
+              <i data-feather="bar-chart" class="icon"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i data-feather="users" class="icon"></i>
+              <span>Clientes</span>
+            </a>
+          </li>
+          <li class="submenu">
+            <a href="#">
+              <i data-feather="map" class="icon"></i>
+              <span>Módulos</span>
+            </a>
+            <ul class="submenu-list">
+              <li>
+                <a href="#">
+                  <span>Pesquisa</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Publicidade</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="submenu">
+            <a href="#">
+              <i data-feather="layers" class="icon"></i>
+              <span>Relatórios</span>
+            </a>
+            <ul class="submenu-list">
+              <li>
+                <a href="#">
+                  <span>Extrato de conexões</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Resumo de conexões</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="submenu">
+            <a href="#">
+              <i data-feather="lock" class="icon"></i>
+              <span>Segurança</span>
+            </a>
+            <ul class="submenu-list">
+              <li>
+                <a href="#">
+                  <span>Usuários</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Alterar senha</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </nav>
+
+    </aside>
+
+    <header class="header">
+      <nav class="profile">
+        <div class="notification">
+          <i data-feather="bell"></i>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <script src="src/js/script.js">
+  </script>
+</body>
+
+</html>
