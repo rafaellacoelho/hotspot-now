@@ -4,7 +4,7 @@
   #F2F2F7 - background
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 * {
   border: 0;
@@ -228,7 +228,7 @@ main .banner .banner-info {
 }
 
 .dashboard .search {
-  width: 100%;
+  width: 330px;
   height: 40px;
   max-width: 480px;
   padding-right: 12px;
@@ -246,11 +246,30 @@ main .banner .banner-info {
   font-size: 16px;
   color: #000;
   font-weight: bold;
+  border: none;
+}
+
+.dashboard .search .search-input:focus-visible {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
 }
 
 .dashboard .search .search-input:placeholder {
   color: #000;
   font-weight: bold;
+}
+
+.dashboard .search .search-input::before {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+  right: 0.5em;
+  margin-left: -50%;
 }
 
 .dashboard .search .search-icon {
@@ -273,4 +292,86 @@ main .banner .banner-info {
 
 .dashboard .add-client .btn-add-client .add-client-icon {
   margin-right: 4px;
+}
+
+/* CARD */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  background: #FEFDFD;
+  box-shadow: 0px 10px 4px rgba(226, 236, 249, 0.5);
+  border-radius: 10px;
+  padding: 16px 8px;
+}
+
+.cards .card .card-icon {
+  background: #F2EFFF;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.cards .card .card-icon .user-icon {
+  width: 42px;
+  height: 42px;
+  color: #70119C;
+}
+
+.cards .card .card-icon .user-icon path,
+.cards .card .card-icon .user-icon circle {
+  fill: #70119C;
+}
+
+.cards .card .card-info h4 {
+  color: #686868;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.cards .card .card-info h3 {
+  font-size: 2.25rem;
+  color: #000;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.cards .card .card-info .text-number {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.cards .card .card-info .text-number .trending-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1;
+  border-left: 1px;
+  border-bottom: 1px;
+  border-style: solid;
+  margin-right: 8px;
+}
+
+.trending-down {
+  color: #D0004B;
+}
+
+.trending-up {
+  color: #00AC4F;
+}
+
+.cards .card .card-info .text-number span {
+  color: #000;
+  font-weight: normal;
+  margin-left: 4px;
 }
