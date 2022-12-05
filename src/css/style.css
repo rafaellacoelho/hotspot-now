@@ -38,7 +38,7 @@ a {
 
 /* SIDEBAR */
 .sidebar {
-  width: 222px;
+  width: 280px;
   background-color: #ffffff;
   border-radius: 1.25rem;
   grid-area: sidebar;
