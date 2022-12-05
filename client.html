@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>HotspotNow</title>
+  <title>HotspotNow - Clientes</title>
   <link rel="stylesheet" href="src/css/style.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 </head>
@@ -24,7 +26,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="./client.html" class="nav-link">
+          <a href="#" class="nav-link">
             <i data-feather="user" class="icon bxs-inbox"></i>
             <span>Clientes</span>
           </a>
@@ -121,18 +123,8 @@
     </header>
 
     <main>
-      <section class="banner">
-        <div class="banner-info">
-          <h1>Olá, Rafaella</h1>
-          <p>Bem vindo de volta</p>
-        </div>
-        <div class="banner-img">
-          <img src="src/img/banner.svg" alt="">
-        </div>
-      </section>
-
       <section class="dashboard">
-        <h2>Dashboard</h2>
+        <h2 class="title-client">Clientes <i data-feather="chevron-right"></i> <span>Gerenciar Contas</span></h2>
 
         <div class="content">
           <div class="search">
@@ -150,136 +142,11 @@
         </div>
       </section>
 
-      <section class="cards">
-        <div class="card">
-          <div class="card-icon">
-            <i data-feather="user-plus" class="user-icon"></i>
-          </div>
-          <div class="card-info">
-            <h4>Usuários cadastrados</h4>
-            <h3>59</h3>
-            <p class="text-number trending-up">
-              <i data-feather="trending-up" class="trending-icon "></i>
-              37,8%<span> no mês</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">
-            <i data-feather="user-check" class="user-icon"></i>
-          </div>
-          <div class="card-info">
-            <h4>Usuários online</h4>
-            <h3>14</h3>
-            <p class="text-number trending-down">
-              <i data-feather="trending-down" class="trending-icon "></i>
-              2%<span> no mês</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">
-            <i data-feather="user-minus" class="user-icon"></i>
-          </div>
-          <div class="card-info">
-            <h4>Usuários offlines</h4>
-            <h3>45</h3>
-            <p class="text-number trending-up">
-              <i data-feather="trending-up" class="trending-icon"></i>
-              11%<span> no mês</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">
-            <i data-feather="user-x" class="user-icon"></i>
-          </div>
-          <div class="card-info">
-            <h4>Usuários inativos</h4>
-            <h3>0</h3>
-            <p class="text-number trending-up">
-              <i data-feather="trending-up" class="trending-icon"></i>
-              0%<span> no mês</span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="charts">
-        <div class="chart-connection">
-          <div class="chart-header">
-            <h2>Acessos à rede</h2>
-            <div class="filter">
-              <input type="text" placeholder="Dia">
-              <i class="filter-icon" data-feather='chevron-down'></i>
-            </div>
-          </div>
-          <div class="chart-content2">
-            <canvas id="barChart" style="width:100%;max-width:800px; height: 200px;"></canvas>
-          </div>
-        </div>
-
-
-        <div class="connections">
-          <h2>Conexões por roteador</h2>
-          <div class="connections-info">
-            <div class="info-icon">
-              <i data-feather="server" class="server-icon"></i>
-            </div>
-            <div class="info-desc">
-              <h5>Sysinit IT Solutions - Ipatinga</h3>
-                <p>0 conexões ativas</p>
-            </div>
-          </div>
-
-          <div class="connections-info">
-            <div class="info-icon">
-              <i data-feather="server" class="server-icon"></i>
-            </div>
-            <div class="info-desc">
-              <h5>Líder Lavajato</h3>
-                <p>0 conexões ativas</p>
-            </div>
-          </div>
-
-          <div class="connections-info">
-            <div class="info-icon">
-              <i data-feather="server" class="server-icon"></i>
-            </div>
-            <div class="info-desc">
-              <h5>Hotel Bristol Itabira</h3>
-                <p>0 conexões ativas</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="chart-registration">
-          <h2>Cadastros</h2>
-          <div class="chart-content">
-            <canvas id="lineChart" style="width:100%;max-width:800px; height: 150px;"></canvas>
-          </div>
-          <div class="legend">
-            <span>
-              <img src="./src/img/purple.svg" alt="">
-              Novos cadastros
-            </span>
-            <span>
-              <img src="./src/img/blue.svg" alt="">
-              Acessos autenticados
-            </span>
-            <span>
-              <img src="./src/img/red.svg" alt="">
-              Acessos não autenticados
-            </span>
-
-          </div>
-        </div>
-
+      <section class="client">
 
       </section>
+
+
     </main>
 
     <aside class="sidebar-activities">
