@@ -8,86 +8,73 @@
   <!-- Font Awesome Cdn Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 </head>
 
 <body>
   <div class="container">
     <aside class="sidebar">
-      <nav class="sidebar-menu">
-        <div class="logo">
-          <img src="./src/img/logo.svg" alt="HOTSPOT NOW Logo">
-        </div>
-        <ul id="accordion-menu" class="menu menu-accordion">
-          <li>
-            <a href="#">
-              <i data-feather="bar-chart" class="icon"></i>
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i data-feather="users" class="icon"></i>
-              <span>Clientes</span>
-            </a>
-          </li>
-          <li class="submenu">
-            <a href="#">
-              <i data-feather="map" class="icon"></i>
-              <span>Módulos</span>
-            </a>
-            <ul class="submenu-list">
-              <li>
-                <a href="#">
-                  <span>Pesquisa</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Publicidade</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="submenu">
-            <a href="#">
-              <i data-feather="layers" class="icon"></i>
-              <span>Relatórios</span>
-            </a>
-            <ul class="submenu-list">
-              <li>
-                <a href="#">
-                  <span>Extrato de conexões</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Resumo de conexões</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="submenu">
-            <a href="#">
-              <i data-feather="lock" class="icon"></i>
-              <span>Segurança</span>
-            </a>
-            <ul class="submenu-list">
-              <li>
-                <a href="#">
-                  <span>Usuários</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Alterar senha</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+      <div class="logo">
+        <a href="#"><img src="./src/img/logo.svg"></a>
+      </div>
 
-      </nav>
-
+      <ul class="side-menu">
+        <li class="nav-item active">
+          <a href="#" class="nav-link">
+            <i data-feather="bar-chart" class="icon bxs-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i data-feather="user" class="icon bxs-inbox"></i>
+            <span>Clientes</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i data-feather="map" class="icon bxs-dashboard"></i>
+            <span>Módulos</span>
+          </a>
+          <ul class="submenu">
+            <li class="submenu-nav-item">
+              <a href="#" class="submenu-nav-link">Pesquisa</a>
+            </li>
+            <li class="submenu-nav-item">
+              <a href="#" class="submenu-nav-link">Publicidade</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i data-feather="layers" class="icon bxs-dashboard"></i>
+            <span>Relatórios</span>
+          </a>
+          <ul class="submenu">
+            <li class="submenu-nav-item">
+              <a href="#" class="submenu-nav-link">Extrato de conexões</a>
+            </li>
+            <li class="submenu-nav-item">
+              <a href="#" class="submenu-nav-link">Resumo de conexões</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i data-feather="lock" class="icon bxs-dashboard"></i>
+            <span>Segurança</span>
+            <i class="bx bxs-user"></i>
+          </a>
+          <ul class="submenu">
+            <li class="submenu-nav-item">
+              <a href="#" class="submenu-nav-link">Usuários</a>
+            </li>
+            <li class="submenu-nav-item">
+              <a href="#" class="submenu-nav-link">Alterar senha</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </aside>
 
     <header class="header">
@@ -222,11 +209,198 @@
           </div>
         </div>
       </section>
+
+      <section class="charts">
+        <div class="chart-connection">
+          <div class="chart-header">
+            <h2>Acessos à rede</h2>
+            <div class="filter">
+              <input type="text" placeholder="Dia">
+              <i class="filter-icon" data-feather='chevron-down'></i>
+            </div>
+          </div>
+          <div class="chart-content2">
+            <canvas id="barChart" style="width:100%;max-width:800px; height: 200px;"></canvas>
+          </div>
+        </div>
+
+
+        <div class="connections">
+          <h2>Conexões por roteador</h2>
+          <div class="connections-info">
+            <div class="info-icon">
+              <i data-feather="server" class="server-icon"></i>
+            </div>
+            <div class="info-desc">
+              <h5>Sysinit IT Solutions - Ipatinga</h3>
+                <p>0 conexões ativas</p>
+            </div>
+          </div>
+
+          <div class="connections-info">
+            <div class="info-icon">
+              <i data-feather="server" class="server-icon"></i>
+            </div>
+            <div class="info-desc">
+              <h5>Líder Lavajato</h3>
+                <p>0 conexões ativas</p>
+            </div>
+          </div>
+
+          <div class="connections-info">
+            <div class="info-icon">
+              <i data-feather="server" class="server-icon"></i>
+            </div>
+            <div class="info-desc">
+              <h5>Hotel Bristol Itabira</h3>
+                <p>0 conexões ativas</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-registration">
+          <h2>Cadastros</h2>
+          <div class="chart-content">
+            <canvas id="lineChart" style="width:100%;max-width:800px; height: 150px;"></canvas>
+          </div>
+          <div class="legend">
+            <span>
+              <img src="./src/img/purple.svg" alt="">
+              Novos cadastros
+            </span>
+            <span>
+              <img src="./src/img/blue.svg" alt="">
+              Acessos autenticados
+            </span>
+            <span>
+              <img src="./src/img/red.svg" alt="">
+              Acessos não autenticados
+            </span>
+
+          </div>
+        </div>
+
+
+      </section>
     </main>
+
+    <aside class="sidebar-activities">
+      <section class="activities">
+        <h2>Atividades</h2>
+        <span>Segunda, 07 de novembro de 2022</span>
+        <div class="activities-info">
+          <div class="info-icon">
+            <i data-feather="check" class="message-icon check"></i>
+            <i data-feather="x" class="message-icon error"></i>
+          </div>
+          <div class="info-desc">
+            <p class="message"><span>Sistema:</span> Login realizado com sucesso</p>
+            <p class="message"><span>Login:</span> samuel</p>
+            <p class="message-date">3 dias, 27 minutos, 48 segundos atrás</p>
+          </div>
+        </div>
+
+        <div class="activities-info">
+          <div class="info-icon">
+            <i data-feather="check" class="message-icon check"></i>
+            <i data-feather="x" class="message-icon error"></i>
+          </div>
+          <div class="info-desc">
+            <p class="message"><span>Sistema:</span> Login realizado com sucesso</p>
+            <p class="message"><span>Login:</span> samuel</p>
+            <p class="message-date">3 dias, 27 minutos, 48 segundos atrás</p>
+          </div>
+        </div>
+
+        <div class="activities-info">
+          <div class="info-icon">
+            <i data-feather="check" class="message-icon check"></i>
+            <i data-feather="x" class="message-icon error"></i>
+          </div>
+          <div class="info-desc">
+            <p class="message"><span>Sistema:</span> Login realizado com sucesso</p>
+            <p class="message"><span>Login:</span> samuel</p>
+            <p class="message-date">3 dias, 27 minutos, 48 segundos atrás</p>
+          </div>
+        </div>
+
+        <div class="activities-info">
+          <div class="info-icon">
+            <i data-feather="check" class="message-icon check"></i>
+            <i data-feather="x" class="message-icon error"></i>
+          </div>
+          <div class="info-desc">
+            <p class="message"><span>Sistema:</span> Login realizado com sucesso</p>
+            <p class="message"><span>Login:</span> samuel</p>
+            <p class="message-date">3 dias, 27 minutos, 48 segundos atrás</p>
+          </div>
+        </div>
+
+        <div class="activities-info">
+          <div class="info-icon">
+            <i data-feather="check" class="message-icon check"></i>
+            <i data-feather="x" class="message-icon error"></i>
+          </div>
+          <div class="info-desc">
+            <p class="message"><span>Sistema:</span> Login realizado com sucesso</p>
+            <p class="message"><span>Login:</span> samuel</p>
+            <p class="message-date">3 dias, 27 minutos, 48 segundos atrás</p>
+          </div>
+        </div>
+
+        <div class="activities-info">
+          <div class="info-icon">
+            <i data-feather="check" class="message-icon check"></i>
+            <i data-feather="x" class="message-icon error"></i>
+          </div>
+          <div class="info-desc">
+            <p class="message"><span>Sistema:</span> Login realizado com sucesso</p>
+            <p class="message"><span>Login:</span> samuel</p>
+            <p class="message-date">3 dias, 27 minutos, 48 segundos atrás</p>
+          </div>
+        </div>
+
+        <div class="activities-info">
+          <div class="info-icon">
+            <i data-feather="check" class="message-icon check"></i>
+            <i data-feather="x" class="message-icon error"></i>
+          </div>
+          <div class="info-desc">
+            <p class="message"><span>Sistema:</span> Login realizado com sucesso</p>
+            <p class="message"><span>Login:</span> samuel</p>
+            <p class="message-date">3 dias, 27 minutos, 48 segundos atrás</p>
+          </div>
+        </div>
+
+        <button class="see-more">Ver mais</button>
+      </section>
+
+      <section class="total-conection">
+        <div class="total-conection-content">
+          <div class="border">
+            <div class="total-info">
+              <div class="total-info-content">
+                <p>395</p>
+                <span>conexões</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="total-desc">
+          <p>Conexões realizadas no recorte temporal delimitado.</p>
+        </div>
+
+      </section>
+    </aside>
+
+
+
+
   </div>
 
-  <script src="src/js/script.js">
-  </script>
+  <script src="src/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
 </body>
 
 </html>
